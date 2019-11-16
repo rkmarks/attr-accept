@@ -3,9 +3,10 @@
   "description": "JavaScript implementation of the \"accept\" attribute for HTML5 <input type=\"file\">",
   "version": "0.0.0-development",
   "main": "dist/index.js",
+  "module": "dist/es/index.js",
   "scripts": {
     "build": "webpack -p",
-    "prepublish": "npm test && npm run build",
+    "prepublishOnly": "npm test && npm run build",
     "pretest": "npm run lint",
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm test -- --watch",
@@ -30,7 +31,8 @@
   "author": "Andrey Okonetchnikov @okonetchnikov",
   "contributors": [
     "Andrey Okonetchnikov <andrey@okonet.ru> (http://okonet.ru)",
-    "Roland Groza <rolandjitsu@gmail.com>"
+    "Roland Groza <rolandjitsu@gmail.com>",
+    "Rick Markins <rmarkins@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
@@ -60,10 +62,11 @@
     "lint-staged": "^4.1.3",
     "mocha": "^3.5.0",
     "prettier": "^1.6.1",
+    "rollup": "^1.27.0",
     "webpack": "^3.5.5"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "config": {
     "commitizen": {
